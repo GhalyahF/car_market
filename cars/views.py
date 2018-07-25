@@ -31,8 +31,9 @@ def car_create(request):
 	if request.method == "POST":
 		form= CarCreateForm(request.POST, request.FILES or None)
 		if form.is_valid():
-			car= form.save(commit=False)
-			car.save()
+			form.save()
+
+		print (form.errors)
 
 	context = {
 		"form": form,
