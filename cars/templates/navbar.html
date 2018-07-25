@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #001f3f;">
+  <a class="navbar-brand" href="{% url 'car-list' %}">Car Market</a>
+   <img src="https://www.graphicsprings.com/filestorage/stencils/858a9a5985230586b82ab4c8da23c480.svg" class="img-fluid" alt="Responsive image">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'car-create' %}">Create Car</a>
+      </li>
+    </ul>
+    
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" name='q' placeholder="I don't do anything">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    
+  </div>
+</nav>

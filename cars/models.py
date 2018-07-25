@@ -1,10 +1,20 @@
 from django.db import models
 from django.urls import reverse
 
+
+LAYOUT_CHOICES = (
+	('standard', 'Standard'),
+	('stacked', 'Stacked'),
+
+	)
+
+
 class Car(models.Model):
-	make = models.CharField(max_length=120)
-	model = models.CharField(max_length=120)
-	year = models.IntegerField()
+	make 		= 	models.CharField(max_length=120)
+	model 		= 	models.CharField(max_length=120)
+	year 		= 	models.IntegerField()
+	car_img		=	models.ImageField(null=True, blank= True,)
+
 
 	def __str__(self):
 		return "{} {} - {}".format(self.make, self.model, self.year)
